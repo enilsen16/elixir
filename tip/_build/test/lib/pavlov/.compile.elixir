@@ -1,0 +1,72 @@
+v2.
+{<<"/Users/eyes/Projects/elixir/tip/_build/test/lib/pavlov/ebin/Elixir.Pavlov.beam">>,
+ 'Elixir.Pavlov',module,<<"lib/pavlov.ex">>,
+ ['Elixir.Kernel','Elixir.Module'],
+ ['Elixir.ExUnit','Elixir.Pavlov.Utils.Memoize.ResultTable'],
+ [],nil}.
+{<<"/Users/eyes/Projects/elixir/tip/_build/test/lib/pavlov/ebin/Elixir.Pavlov.Syntax.Sugar.beam">>,
+ 'Elixir.Pavlov.Syntax.Sugar',module,<<"lib/syntax/sugar.ex">>,
+ ['Elixir.Kernel','Elixir.Module'],
+ [],[],nil}.
+{<<"/Users/eyes/Projects/elixir/tip/_build/test/lib/pavlov/ebin/Elixir.Pavlov.Callbacks.beam">>,
+ 'Elixir.Pavlov.Callbacks',module,<<"lib/callbacks.ex">>,
+ ['Elixir.Kernel','Elixir.ExUnit.Callbacks','Elixir.Module'],
+ [erlang,'Elixir.Enum','Elixir.Access','Elixir.Macro'],
+ [],nil}.
+{<<"/Users/eyes/Projects/elixir/tip/_build/test/lib/pavlov/ebin/Elixir.Pavlov.Mocks.Matchers.Messages.beam">>,
+ 'Elixir.Pavlov.Mocks.Matchers.Messages',module,
+ <<"lib/mocks/matchers/messages.ex">>,
+ ['Elixir.Kernel','Elixir.Module'],
+ ['Elixir.String.Chars'],
+ [],nil}.
+{<<"/Users/eyes/Projects/elixir/tip/_build/test/lib/pavlov/ebin/Elixir.Pavlov.Mocks.beam">>,
+ 'Elixir.Pavlov.Mocks',module,<<"lib/mocks.ex">>,
+ ['Elixir.Kernel','Elixir.Kernel.Utils','Elixir.ExUnit.Callbacks',
+  'Elixir.Protocol','Elixir.Module'],
+ [erlang,meck],
+ [],nil}.
+{<<"/Users/eyes/Projects/elixir/tip/_build/test/lib/pavlov/ebin/Elixir.Pavlov.Matchers.Messages.beam">>,
+ 'Elixir.Pavlov.Matchers.Messages',module,<<"lib/matchers/messages.ex">>,
+ ['Elixir.Kernel','Elixir.Module'],
+ ['Elixir.String.Chars'],
+ [],nil}.
+{<<"/Users/eyes/Projects/elixir/tip/_build/test/lib/pavlov/ebin/Elixir.Pavlov.Utils.Memoize.ResultTable.beam">>,
+ 'Elixir.Pavlov.Utils.Memoize.ResultTable',module,<<"lib/utils/memoize.ex">>,
+ ['Elixir.Pavlov.Utils.Memoize','Elixir.Kernel','Elixir.GenServer',
+  'Elixir.Module'],
+ [erlang,'Elixir.Dict','Elixir.HashDict','Elixir.Access'],
+ [],nil}.
+{<<"/Users/eyes/Projects/elixir/tip/_build/test/lib/pavlov/ebin/Elixir.Pavlov.Case.beam">>,
+ 'Elixir.Pavlov.Case',module,<<"lib/case.ex">>,
+ ['Elixir.ExUnit.Test','Elixir.Kernel','Elixir.Module'],
+ [erlang,'Elixir.Dict',maps,'Elixir.String','Elixir.Enum','Elixir.Keyword',
+  'Elixir.String.Chars','Elixir.Access','Elixir.Map','Elixir.Macro'],
+ [],nil}.
+{<<"/Users/eyes/Projects/elixir/tip/_build/test/lib/pavlov/ebin/Elixir.Pavlov.Mocks.Matchers.beam">>,
+ 'Elixir.Pavlov.Mocks.Matchers',module,<<"lib/mocks/matchers.ex">>,
+ ['Elixir.Pavlov.Mocks.Matchers.Messages','Elixir.Kernel','Elixir.Module',
+  'Elixir.ExUnit.Assertions'],
+ [erlang,meck,'Elixir.List','Elixir.ExUnit.AssertionError',
+  'Elixir.String.Chars'],
+ [],nil}.
+{<<"/Users/eyes/Projects/elixir/tip/_build/test/lib/pavlov/ebin/Elixir.Pavlov.Utils.Memoize.beam">>,
+ 'Elixir.Pavlov.Utils.Memoize',module,<<"lib/utils/memoize.ex">>,
+ ['Elixir.Pavlov.Utils.Memoize.ResultTable','Elixir.Kernel',
+  'Elixir.GenServer','Elixir.Module'],
+ [erlang,'Elixir.Dict','Elixir.HashDict','Elixir.Access'],
+ [],nil}.
+{<<"/Users/eyes/Projects/elixir/tip/_build/test/lib/pavlov/ebin/Elixir.Pavlov.Matchers.beam">>,
+ 'Elixir.Pavlov.Matchers',module,<<"lib/matchers.ex">>,
+ ['Elixir.Kernel','Elixir.Module','Elixir.ExUnit.Assertions',
+  'Elixir.Kernel.Typespec'],
+ [erlang,'Elixir.Dict','Elixir.Exception','Elixir.RuntimeError',
+  'Elixir.ArgumentError','Elixir.String','Elixir.ExUnit.AssertionError',
+  'Elixir.Enum','Elixir.String.Chars','Elixir.System'],
+ [],nil}.
+{<<"/Users/eyes/Projects/elixir/tip/_build/test/lib/pavlov/ebin/Elixir.Pavlov.Syntax.Expect.beam">>,
+ 'Elixir.Pavlov.Syntax.Expect',module,<<"lib/syntax/expect.ex">>,
+ [erlang,'Elixir.Kernel','Elixir.Enum','Elixir.Module',
+  'Elixir.Pavlov.Matchers','Elixir.String.Chars',
+  'Elixir.Pavlov.Matchers.Messages','Elixir.ExUnit.Assertions'],
+ ['Elixir.ExUnit.AssertionError'],
+ [],nil}.
