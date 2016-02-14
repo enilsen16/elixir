@@ -1,6 +1,6 @@
 v2.
 {<<"_build/dev/lib/tip/ebin/Elixir.Tip.beam">>,'Elixir.Tip',module,
- <<"lib/calc.ex">>,
+ <<"lib/tip.ex">>,
  ['Elixir.Kernel'],
  [erlang,'Elixir.Enum','Elixir.String','Elixir.IO'],
  [],nil}.

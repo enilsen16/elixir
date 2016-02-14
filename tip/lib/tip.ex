@@ -1,25 +1,25 @@
 defmodule Tip do
   def execute do
-    total = user_input_total
-    tip = user_input_tip
-    tip_to_pay = calculate_tip(total, tip)
-    pay = total + tip_to_pay
-    IO.puts Enum.join(["Tip: $", tip_to_pay], "")
-    IO.puts Enum.join(["Total: $", pay], "")
+    { bill, _ } = get_bill()
+    { tax, _ } = get_tax()
+    IO.inspect calculate_tip(bill, tax)
   end
 
   def calculate_tip(total, tip) do
     percent = tip / 100
-    total * percent
+    Float.round(total * percent, 2)
   end
 
-  defp user_input_tip do
-    tip_rate = IO.gets "How much would you like to tip? "
-    String.to_integer(String.strip(tip_rate))
+  def get_bill do
+    bill = IO.gets "What is your total? "
+    check_input [ bill: bill ]
   end
 
-  defp user_input_total do
-    total = IO.gets "How much is your bill? "
-    String.to_integer(String.strip(total))
+  def get_tax do
+    tax = IO.gets "What percentage would you like to tip? "
+    check_input [ tax: tax ]
   end
+
+  defp check_input([ tax: tax_percent ]), do: Float.parse tax_percent
+  defp check_input([ bill: bill_amount ]), do: Float.parse bill_amount
 end
