@@ -1,0 +1,2 @@
+defmodule Ping do
+end
