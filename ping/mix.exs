@@ -14,7 +14,7 @@ defmodule Ping.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :httpoison]]
   end
 
   # Dependencies can be Hex packages:
@@ -28,7 +28,8 @@ defmodule Ping.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:httpoison, ">= 0.5.0"}
+      {:httpoison, ">= 0.5.0"},
+      {:floki, ">= 0.7.2"}
     ]
   end
 end

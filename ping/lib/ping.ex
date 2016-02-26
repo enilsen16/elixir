@@ -1,13 +1,7 @@
 defmodule Ping do
-  def child(pid, url) do
-
-  end
-
-  def ping_url do
-    
-  end
 
   def main do
-
+    {:ok, %HTTPoison.Response{body: body}} = HTTPoison.get "https://www.wikipedia.org/wiki/Star_Wars"
+     body |> Floki.find(".div-col a") |> Floki.attribute("href") |> Enum.filter(fn(x) -> String.starts_with?(x, "/wiki/") end )
   end
 end
