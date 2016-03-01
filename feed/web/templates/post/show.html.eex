@@ -1,0 +1,13 @@
+<h2>Show post</h2>
+
+<ul>
+
+  <li>
+    <strong>Caption:</strong>
+    <%= @post.caption %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: post_path(@conn, :edit, @post) %>
+<%= link "Back", to: post_path(@conn, :index) %>

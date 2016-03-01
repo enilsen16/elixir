@@ -1,8 +1,8 @@
-defmodule Feed.Mixfile do
+defmodule ArcPlayground.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :feed,
+    [app: :arc_playground,
      version: "0.0.1",
      elixir: "~> 1.0",
      elixirc_paths: elixirc_paths(Mix.env),
@@ -17,9 +17,9 @@ defmodule Feed.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {Feed, []},
+    [mod: {ArcPlayground, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :erlcloud, :arc]]
   end
 
   # Specifies which paths to compile per environment.
@@ -30,15 +30,15 @@ defmodule Feed.Mixfile do
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-     [{:arc, ">= 0.4.1"},
-     {:arc_ecto, ">= 0.3.2"},
-     {:cowboy, "~> 1.0"},
-     {:gettext, "~> 0.9"},
+    [{:phoenix, "~> 1.1.4"},
+     {:postgrex, ">= 0.0.0"},
      {:phoenix_ecto, "~> 2.0"},
      {:phoenix_html, "~> 2.4"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
-     {:phoenix, "~> 1.1.4"},
-     {:postgrex, ">= 0.0.0"}]
+     {:gettext, "~> 0.9"},
+     {:cowboy, "~> 1.0"},
+     {:arc, ">= 0.1.0"},
+     {:arc_ecto, ">= 0.1.0"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.

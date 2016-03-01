@@ -1,5 +1,5 @@
-defmodule Feed.Router do
-  use Feed.Web, :router
+defmodule ArcPlayground.Router do
+  use ArcPlayground.Web, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,15 +13,14 @@ defmodule Feed.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", Feed do
+  scope "/", ArcPlayground do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    resources "/posts", PostController
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", Feed do
+  # scope "/api", ArcPlayground do
   #   pipe_through :api
   # end
 end
