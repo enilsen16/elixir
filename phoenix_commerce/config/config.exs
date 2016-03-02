@@ -27,3 +27,16 @@ import_config "#{Mix.env}.exs"
 config :phoenix, :generators,
   migration: true,
   binary_id: false
+
+  config :arc,
+  virtual_host: true,
+  bucket: "phoenix-commerce-1"
+
+config :ex_aws,
+  access_key_id: "",
+  secret_access_key: "",
+  region: "us-west-2"
+
+config :ex_aws, :s3,
+  scheme: "https://",
+  host: "s3-us-west-2.amazonaws.com"
