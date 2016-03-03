@@ -1,4 +1,4 @@
-<%= form_for @changeset, @action, fn f -> %>
+<%= form_for @changeset, @action, [multipart: true], fn f -> %>
   <%= if @changeset.action do %>
     <div class="alert alert-danger">
       <p>Oops, something went wrong! Please check the errors below.</p>
@@ -9,6 +9,11 @@
     <%= label f, :caption, class: "control-label" %>
     <%= text_input f, :caption, class: "form-control" %>
     <%= error_tag f, :caption %>
+  </div>
+
+  <div class="form-group">
+    <%= file_input f, :photo %>
+    <%= error_tag f, :photo %>
   </div>
 
   <div class="form-group">

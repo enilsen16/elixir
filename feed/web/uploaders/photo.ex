@@ -1,10 +1,11 @@
 defmodule Feed.Photo do
   use Arc.Definition
-
-  # Include ecto support (requires package arc_ecto installed):
   use Arc.Ecto.Definition
 
-  @versions [:original]
+  # Include ecto support (requires package arc_ecto installed):
+  # use Arc.Ecto.Definition
+
+  @versions [:original, :thumb]
 
   # To add a thumbnail version:
   # @versions [:original, :thumb]
@@ -15,9 +16,13 @@ defmodule Feed.Photo do
   end
 
   # Define a thumbnail transformation:
-  # def transform(:thumb, _) do
-  #   {:convert, "-strip -thumbnail 250x250^ -gravity center -extent 250x250 -format png"}
-  # end
+  def transform(:thumb, _) do
+    {:convert, "-strip -thumbnail 250x250^ -gravity center -extent 250x250 -format png"}
+  end
+
+  def __storage, do: Arc.Storage.Local
+
+  def filename(version,  {file, scope}), do: "#{version}-#{file.file_name}"
 
   # Override the persisted filenames:
   # def filename(version, _) do
@@ -26,7 +31,7 @@ defmodule Feed.Photo do
 
   # Override the storage directory:
   # def storage_dir(version, {file, scope}) do
-  #   "uploads/user/avatars/#{scope.id}"
+  #   "uploads/page_prototypes/prototype_image/#{scope.id}"
   # end
 
   # Provide a default URL if there hasn't been a file uploaded

@@ -3,6 +3,7 @@
 <table class="table">
   <thead>
     <tr>
+      <th>Preview</th>
       <th>Caption</th>
 
       <th></th>
@@ -11,8 +12,8 @@
   <tbody>
 <%= for post <- @posts do %>
     <tr>
+      <td><img src="<%= Feed.Photo.url({post.photo, post}, :thumb) %>" width=50 /></td>
       <td><%= post.caption %></td>
-
       <td class="text-right">
         <%= link "Show", to: post_path(@conn, :show, post), class: "btn btn-default btn-xs" %>
         <%= link "Edit", to: post_path(@conn, :edit, post), class: "btn btn-default btn-xs" %>

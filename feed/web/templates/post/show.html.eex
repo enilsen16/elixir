@@ -1,13 +1,37 @@
-<h2>Show post</h2>
+<h1> Feed</h1>
 
-<ul>
+<div class="post-show">
+  <div class="row">
 
-  <li>
-    <strong>Caption:</strong>
-    <%= @post.caption %>
-  </li>
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#post-collapse">
+              Image
+            </a>
+          </h4>
+        </div>
 
-</ul>
+        <div id="post-collapse" class="panel-collapse collapse">
+          <div class="panel-body">
+            <img class="max-width-100 margin-bottom-20px" src="/<%= Feed.Photo.url({@post.photo, @post}, :thumb) %> " />
 
-<%= link "Edit", to: post_path(@conn, :edit, @post) %>
-<%= link "Back", to: post_path(@conn, :index) %>
+            <a href="/<%= Feed.Photo.url({@post.photo, @post}) %> ">Full Sized Image</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="post-attributes">
+        <strong>Caption:</strong>
+        <%= @post.caption %>
+      </div>
+    </div>
+
+  </div>
+
+  <%= link "Edit", to: post_path(@conn, :edit, @post), class: "btn btn-info" %>
+  <%= link "Back", to: post_path(@conn, :index), class: "btn btn-default" %>
+</div>
