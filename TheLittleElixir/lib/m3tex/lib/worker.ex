@@ -1,26 +1,27 @@
 defmodule M3tex.Worker do
   use GenServer
 
+  @name MW
   # Client API
 
   def start_link(opts \\ []) do
-    GenServer.start_link(__MODULE__, :ok, opts)
+    GenServer.start_link(__MODULE__, :ok, opts ++ [name: MW])
   end
 
-  def get_temperature(pid, location) do
-    GenServer.call(pid, {:location, location})
+  def get_temperature(location) do
+    GenServer.call(@name, {:location, location})
   end
 
-  def get_stats(pid) do
-    GenServer.call(pid, :get_stats)
+  def get_stats do
+    GenServer.call(@name, :get_stats)
   end
 
-  def reset_stats(pid) do
-    GenServer.cast(pid, :reset_stats)
+  def reset_stats do
+    GenServer.cast(@name, :reset_stats)
   end
 
-  def stop(pid) do
-    GenServer.cast(pid, :stop)
+  def stop do
+    GenServer.cast(@name, :stop)
   end
 
   # Server Callbacks
@@ -47,6 +48,18 @@ defmodule M3tex.Worker do
   end
   def handle_cast(:stop, stats) do
     {:stop, :normal, stats}
+  end
+
+  def terminate(reason, stats) do
+    # We could write to a DB or file, etc..
+    IO.puts "server terminated because of #{inspect reason}"
+    inspect stats
+    :ok
+  end
+
+  def handle_info(msg, stats) do
+    IO.puts "received #{inspect msg}"
+    {:noreply, stats}
   end
 
   # Helper Functions
