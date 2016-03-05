@@ -55,7 +55,7 @@ defmodule Cache.Worker do
     {:reply, key, new_stats}
   end
   def handle_call({:exist?, key}, _from, stats) do
-    cond(key_exist(stats, key)) do
+    case key_exist(stats, key) do
       true ->
         {:reply, true, stats}
       false ->
