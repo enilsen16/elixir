@@ -9,7 +9,7 @@ use Mix.Config
 config :phoenix_commerce, PhoenixCommerce.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
-  secret_key_base: "MWh5vSpeHnhbrnpk+TwcJHigLd/f3UkNygrfoOdn5TaGulcfQWEF/Q7/vAAI43zq",
+  secret_key_base: "8M1e2ki9oRuKcYaw4BtEPUJAukLnfoHW1qRMQXwnGFqSGsseZKHPqVqNLt3PeP0v",
   render_errors: [accepts: ~w(html json)],
   pubsub: [name: PhoenixCommerce.PubSub,
            adapter: Phoenix.PubSub.PG2]
@@ -27,16 +27,3 @@ import_config "#{Mix.env}.exs"
 config :phoenix, :generators,
   migration: true,
   binary_id: false
-
-  config :arc,
-  virtual_host: true,
-  bucket: "phoenix-commerce-1"
-
-config :ex_aws,
-  access_key_id: "",
-  secret_access_key: "",
-  region: "us-west-2"
-
-config :ex_aws, :s3,
-  scheme: "https://",
-  host: "s3-us-west-2.amazonaws.com"
