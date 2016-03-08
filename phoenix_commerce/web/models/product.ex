@@ -1,12 +1,13 @@
 defmodule PhoenixCommerce.Product do
   use PhoenixCommerce.Web, :model
   use Arc.Ecto.Model
-  
+
   schema "products" do
     field :description, :string
     field :image, PhoenixCommerce.Image.Type
     field :name, :string
     field :price, :decimal
+    has_many :line_items, PhoenixCommerce.LineItem
 
     timestamps
   end

@@ -1,5 +1,8 @@
 <h2>Show product</h2>
 
+<%= link "Edit", to: product_path(@conn, :edit, @product) %>
+<%= link "Back", to: product_path(@conn, :index) %>
+
 <ul>
 
   <li>
@@ -19,5 +22,7 @@
 
 </ul>
 
-<%= link "Edit", to: product_path(@conn, :edit, @product) %>
-<%= link "Back", to: product_path(@conn, :index) %>
+<%= form_for @conn, add_to_cart_path(@conn, :add), [as: "add_to_cart"], fn f -> %>
+  <%= hidden_input(:product, :id, value: @product.id) %>
+  <%= submit "Add to cart", class: "add-to-cart" %>
+<% end %>
