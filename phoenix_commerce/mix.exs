@@ -49,7 +49,8 @@ defmodule PhoenixCommerce.Mixfile do
      {:cowboy, "~> 1.0"},
      {:hound, "~> 0.7.6", only: :test},
      {:arc, ">= 0.2.2"},
-     {:arc_ecto, ">= 0.3.1"}
+     {:arc_ecto, ">= 0.3.1"},
+     {:mix_test_watch, "~> 0.2", only: :dev}
    ]
   end
 
