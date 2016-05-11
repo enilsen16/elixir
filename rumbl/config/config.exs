@@ -5,12 +5,16 @@
 # is restricted to this project.
 use Mix.Config
 
+# General application configuration
+config :rumbl,
+  ecto_repos: [Rumbl.Repo]
+
 # Configures the endpoint
 config :rumbl, Rumbl.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
-  secret_key_base: "ltRs1geKWfVMKGO0n7cu4wodGEUi4MlK8j8hNteMk304CbT7qqwXpXXYZJOm+w6q",
-  render_errors: [accepts: ~w(html json)],
+  secret_key_base: "8wiv6SK46uW2+mZk1lVntYApRS6GH0FCTKNgVch3uncjfARA0cxBmzG0AUUCoyYB",
+  render_errors: [view: Rumbl.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Rumbl.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
@@ -22,8 +26,3 @@ config :logger, :console,
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
-
-# Configure phoenix generators
-config :phoenix, :generators,
-  migration: true,
-  binary_id: false
